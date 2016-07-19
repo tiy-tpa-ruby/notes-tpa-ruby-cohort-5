@@ -1,0 +1,24 @@
+h1 {
+  color: #378aad;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: blue;
+  font-size: 1em;
+}
+
+.staff li {
+  list-style: none;
+  border-bottom: 2px solid rgb(45, 37, 82);
+  flex-grow: 1;
+  text-align: center;
+}
+
+.staff ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
