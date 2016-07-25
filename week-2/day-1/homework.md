@@ -19,7 +19,7 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **Ruby code.** This code should be executable, should run without errors, and should accomplish the requirements given below. Try to keep to the ruby style guide as you code.
-* **A link to a Gist.** Create a Ruby Gist on http://gist.github.com and paste your Ruby code into it. Run your code in the command line. Running this with `atom-runner` or `seeing is beliving` won't work for us because we are interacting with the user. Submit the link to this gist via the homework submission form found on the course website.
+* **A link to a Github repository**
 
 ## Explorer Mode
 
