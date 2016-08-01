@@ -34,19 +34,19 @@ class Database
     # use some enumerable method that gives me back
     # the first person who's name matches the name
     # I am looking for
-    found_person = @people.find { |person| name_to_find == person.name }
-
-    if found_person != nil
-      puts "Details about #{found_person.name}. They make #{found_person.salary} dollars"
-    else
-      puts "Sorry..."
-    end
 
     # if found
-    #   print details
+    if @people.any? { |person| name_to_find == person.name }
+      found_person = @people.find { |person| name_to_find == person.name }
+      #   print details
+      puts "Details about #{found_person.name}. They make #{found_person.salary} dollars"
     # else
-    #   print sorry message
-    # end
+    else
+      #   print sorry message
+      puts "Sorry..."
+      # end
+    end
+
   end
 end
 

@@ -51,7 +51,6 @@ class Database
       puts "Sorry..."
       # end
     end
-
   end
 end
 
