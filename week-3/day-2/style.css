@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 4em;
+}
+
+.name {
+  color: red;
+}
+
+ul {
+  border-bottom: 1px solid black;
+}
