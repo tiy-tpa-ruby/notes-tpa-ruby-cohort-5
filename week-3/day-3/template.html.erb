@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+
+  ul {
+    list-style: none;
+    list-style: square;
+    border-bottom-color: orange;
+    border-bottom-style: groove;
+}
+li  {
+  list-style: none;
+}
+h1 {
+  color: gray;
+  text-align: center;
+
+}
+
+  </style>
+  <body>
+    <h1>Employee Report</h1>
+    <!-- For each position (Instructor, Campus Director, etc)
+    The minimum salary.
+    The maximum salary.
+    The average salary.
+    The number of employees for each position
+    The names of each employee in that position -->
+
+    <% positions.each do |position| %>
+      <h2><%= position %></h2>
+      <h3>Salary</h3>
+      <ul>
+        <li>Minimum: $<%= minimum_salary(position) %></li>
+        <li>Maximum: $<%= maximum_salary(position) %></li>
+        <li>Average: $<%= average_salary(position) %></li>
+        <li>
+          <%= employee_count(position) %>
+          <!-- Duplicating effor to be clear -->
+          <!-- <%= @people.count { |person| person.position == position } %> -->
+          Employees:
+
+          <%= employee_names(position) %>
+        </li>
+      </ul>
+    <% end %>
+</body>
+</html>

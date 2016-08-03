@@ -1,0 +1,18 @@
+- Dash documentation tool
+  - Download and add these docsets:
+    - ruby
+    - html
+    - css
+  - Don't load up or your searches will be confusing
+- Enumerables
+  - select
+  - map
+- For our database
+  - start with an html file
+  - design the Report
+  - mock up at least a section for three/four instructors
+  - Turn this into an ERB file (template.html.erb)
+  - Report code should:
+    - read the file from disk into a string `string = File.read`
+    - turn that string into an ERB object `template = ERB.new(string)`
+    - Let ERB do it's `magic` of merging: `output = template.result(binding)`
