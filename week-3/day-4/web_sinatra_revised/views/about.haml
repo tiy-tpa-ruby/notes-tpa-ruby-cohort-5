@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title
+  %body
+    = @random_word
+    crafted at The Iron Yard
+    %p.nav-links.home-links
+      %a{:href => "/"} Home
+      %a{:href => "google.com"} Google
+    %p#boom.great
+      This is great
+    %ul
+      - @words.each do |word|
+        %li= word
+      

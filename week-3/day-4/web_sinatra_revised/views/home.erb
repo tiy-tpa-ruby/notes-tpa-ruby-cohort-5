@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    body {
+      background-color: <%= @color %>;
+      font-size: <%= @size %>em;
+    }
+    </style>
+  </head>
+  <body>
+    <a href="/about">About this amazing app</a>
+
+    <p>
+      Hello, world from Sinatra templates. My <strong>favorite</strong> number is <%= rand(1000) %>
+    </p>
+
+    <!-- Attribution: https://www.flickr.com/photos/smemon/4388574260/in/photolist-7FNAes-cvQtbW-5Y3wiS-dmU998-b3rKqH-a6ixjp-7FHSaR-6f3poB-6X9V6y-d2Ru8G-eifftB-6pMD3w-fzCN2Z-c1Duq9-iZzGi-9bgFge-sv7bgx-7dEasb-pkLsv2-71wsz9-4Gcb9L-oxwqs3-pUhSfd-gpofqK-LU3HM-9UMrw9-9fdDjq-a99hxj-3Ssp2v-98ejH9-7iai3-dNTcE-7ZbqH5-2EXowJ-e2ppbd-qc4amg-cScaqb-4WoQ6w-6Z1ULA-kQzZgn-9RuP1k-dWFCY5-hc9si-coxi5G-61TvxZ-4dP4B6-9PgkH4-9xnw9Q-8TVWD9-qZNq5y -->
+    <img src="images/search.png" alt="">
+
+    <form action="/add_colors" method="post">
+    <label for="color">Color:</label>
+    <input id="color" name="color" type="text">
+
+    <label for="size">Size:</label>
+    <input id="size" name="size" type="text">
+
+    <input type="submit" value="Save">
+    </form>
+
+    <p>Hey there, my favorite color is <%= @color %> and my favorite size is <%= @size %></p>
+
+    <p>The colors I've seen are <%= $database.colors_seen %></p>
+    <p>The sizes I've seen are <%= $database.sizes_seen %></p>
+
+    <a href="/search"><h1>Search</h1></a>
+  </body>
+</html>

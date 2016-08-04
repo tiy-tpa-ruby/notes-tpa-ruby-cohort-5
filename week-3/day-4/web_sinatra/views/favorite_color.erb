@@ -1,0 +1,15 @@
+<html>
+<head>
+<style>
+body {
+  background-color: <%= @color %>;
+  font-size: <%= @size %>em;
+}
+</style>
+<body>
+<p>Hey there, my favorite color is <%= @color %> and my favorite size is <%= @size %> <a href='/'>HOME</a></p>
+
+<p>The colors I've seen are <%= $database.colors_seen %></p>
+<p>The sizes I've seen are <%= $database.sizes_seen %></p>
+</body>
+</html>

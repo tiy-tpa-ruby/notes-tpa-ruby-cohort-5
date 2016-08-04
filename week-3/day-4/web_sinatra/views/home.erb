@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>
+      Hello, world from Sinatra templates. My favorite number is <%= rand(1000) %>
+    </p>
+
+    <form action="/favorite_color">
+    <label for="color">Color:</label>
+    <input id="color" name="color" type="text">
+
+    <label for="size">Size:</label>
+    <input id="size" name="size" type="text">
+
+    <input type="submit" value="Save">
+
+    </form>
+  </body>
+</html>
