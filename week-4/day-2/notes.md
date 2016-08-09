@@ -14,8 +14,12 @@
     - update people set address = "456 Palm Street" where name = "Gavin";
   - DELETE rows
     - delete from people where name = "Gavin";
-- Multiple tables
-- JOIN
+- Multiple tables & joins
+  - See queries.sql
+
+- Visual explaination of a join:
+  - [https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+  - [http://www.sql-join.com](http://www.sql-join.com)
 
 - SQL from code
   ```
