@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Player</title>
+    <style>
+    ul {
+      list-style: none;
+    }
+    </style>
+  </head>
+  <body>
+    <form action="/players/create" method="post">
+      <ul>
+        <li>
+          <label for="name">Name</label>
+          <input type="text" name="name">
+        </li>
+        <li>
+          <label for="age">Age</label>
+          <input type="text" name="age">
+        </li>
+
+        <li>
+          <label for="shirt_size">Shirt Size</label>
+          <input type="text" name="shirt_size">
+        </li>
+
+        <li>
+          <label for="birthday">Birthday</label>
+          <input type="text" name="birthday">
+        </li>
+
+        <li>
+          <input type="submit" value="Create">
+        </li>
+      </ul>
+    </form>
+
+    <a href="/">Home</a>
+  </body>
+</html>

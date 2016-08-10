@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Player</title>
+  </head>
+  <body>
+    <% if @player %>
+      <h1>Player Details</h1>
+      <ul>
+        <li>Name: <%= @player.name %></li>
+        <li>Age: <%= @player.age %></li>
+        <li>Shirt Size: <%= @player.shirt_size %></li>
+        <li>Birthday: <%= @player.birthday %></li>
+      </ul>
+    <% else %>
+      <h1>No Player Found</h1>
+    <% end %>
+
+    <a href="/">Home</a>
+  </body>
+</html>

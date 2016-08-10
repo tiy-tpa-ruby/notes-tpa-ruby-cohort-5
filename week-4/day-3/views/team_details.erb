@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Team</title>
+  </head>
+  <body>
+    <% if @team %>
+      <h1>Team Details</h1>
+      <ul>
+        <li>Name: <%= @team.name %></li>
+        <li>Mascot: <%= @team.mascot %></li>
+        <li>Sport: <%= @team.sport %></li>
+      </ul>
+    <% else %>
+      <h1>No Team Found</h1>
+    <% end %>
+
+    <a href="/">Home</a>
+  </body>
+</html>
