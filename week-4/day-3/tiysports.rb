@@ -16,6 +16,10 @@ end
 class Team < ActiveRecord::Base
 end
 
+after do
+  ActiveRecord::Base.connection.close
+end
+
 get '/' do
   @players = Player.all
   @teams = Team.all
