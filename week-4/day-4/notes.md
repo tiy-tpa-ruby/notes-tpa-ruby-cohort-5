@@ -57,11 +57,11 @@ Making an app
 
 # ActiveRecord resources
 
-- [http://guides.rubyonrails.org/active_record_basics.html](Active Record Basics)
+- [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
   - Sections 1, 2, 3, 5
-- [http://guides.rubyonrails.org/active_record_querying.html](Active Record Querying)
+- [Active Record Querying](http://guides.rubyonrails.org/active_record_querying.html)
   - Sections 1, 2, 3, 4, 5
-- [http://guides.rubyonrails.org/association_basics.html](Active Record Associations)
+- [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
   - Sections 1, 2
 
 # Implement a "glossary of terms" app for TIY
