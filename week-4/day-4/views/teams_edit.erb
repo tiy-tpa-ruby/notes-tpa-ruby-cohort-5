@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Team</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <h1>Team Details</h1>
+    <div class="container">
+      <% if @team %>
+        <div>
+          <h1>Updating Team Info</h1>
+          <form action="/teams/<%= @team.id %>" method="post">
+            <input name="_method" value="put" type="hidden">
+            <ul>
+              <li>
+                <label for="name">Name</label>
+                <input type="text" name="team[name]" value="<%= @team.name %>">
+              </li>
+
+              <li>
+                <label for="mascot">Mascot</label>
+                <input type="text" name="team[mascot]" value="<%= @team.mascot %>">
+              </li>
+
+              <li>
+                <label for="sport">Sport</label>
+                <input type="text" name="team[sport]" value="<%= @team.sport %>">
+              </li>
+
+              <li>
+                <input type="submit" value="Update Team">
+              </li>
+            </ul>
+          </form>
+
+          <a href="/">Home</a>
+        </div>
+      <% else %>
+        <h1>No Team Found</h1>
+        <a href="/">Home</a>
+      <% end %>
+    </div>
+  </body>
+</html>

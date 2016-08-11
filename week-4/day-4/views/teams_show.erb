@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Team</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <h1>Team Details</h1>
+    <div class="container">
+      <div>
+        <ul>
+          <li>Name: <%= @team.name %></li>
+          <li>Mascot: <%= @team.mascot %></li>
+          <li>Sport: <%= @team.sport %></li>
+        </ul>
+      </div>
+      <div>
+        <a href="/teams/<%= @team.id %>/edit">Edit</a>
+
+        <form action="/teams/<%=@team.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete Team">
+        </form>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </body>
+</html>

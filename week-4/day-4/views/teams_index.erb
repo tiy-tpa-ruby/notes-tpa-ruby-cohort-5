@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <h1>Welcome to TIY Sports</h1>
+
+    <div class="container">
+      <div>
+        <h2>
+          Teams - Mascot
+          <% if @name %>
+            - Searching for <%= @name %>
+          <% end %>
+        </h2>
+
+        <% if flash[:error] %>
+          <h3 class="error"><%= flash[:error] %></h3>
+        <% end %>
+
+        <ul>
+        <% @teams.each do |team| %>
+          <li><a href="/teams/<%= team.id %>"><%= team.name %> - <%= team.mascot %></a></li>
+        <% end %>
+        </ul>
+
+        <a href="/teams/new">Add Team</a>
+
+        <form action="/teams" method="get">
+          <input type="text" name="name">
+          <input type="submit" value="Search Teams">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

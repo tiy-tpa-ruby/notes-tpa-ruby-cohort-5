@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TIY Sports - Player</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <h1>Player Details</h1>
+    <div class="container">
+      <div>
+        <% if @player %>
+          <ul>
+            <li>Name: <%= @player.name %></li>
+            <li>Age: <%= @player.age %></li>
+            <li>Shirt Size: <%= @player.shirt_size %></li>
+            <li>Birthday: <%= @player.birthday %></li>
+          </ul>
+        <% else %>
+          <h1>No Player Found</h1>
+        <% end %>
+      </div>
+
+      <div>
+        <form action="/players/player_update" method="post">
+          <input type="text" name="name">
+          <input type="submit" value="Update Player">
+        </form>
+
+        <br>
+
+        <form action="/players/delete/<%=@player.id %>" method="post">
+          <input type="submit" value="Delete Player">
+        </form>
+
+        <br>
+
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </body>
+</html>
