@@ -1,0 +1,33 @@
+<% content_for :banner do %>
+Add a Player
+<% end %>
+
+<!-- CONVERT THIS TO USE CONTAINER -->
+<form action="/players/create" method="post">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name">
+    </li>
+    <li>
+      <label for="age">Age</label>
+      <input type="text" name="age">
+    </li>
+
+    <li>
+      <label for="shirt_size">Shirt Size</label>
+      <input type="text" name="shirt_size">
+    </li>
+
+    <li>
+      <label for="birthday">Birthday</label>
+      <input type="text" name="birthday">
+    </li>
+
+    <li>
+      <input type="submit" value="Create">
+    </li>
+  </ul>
+</form>
+
+<a href="/">Home</a>

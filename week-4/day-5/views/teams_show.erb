@@ -1,0 +1,21 @@
+
+<% content_for :page_header do %>
+Team Details
+<% end %>
+
+<div>
+  <ul>
+    <li>Name: <%= @team.name %></li>
+    <li>Mascot: <%= @team.mascot %></li>
+    <li>Sport: <%= @team.sport %></li>
+  </ul>
+</div>
+<div>
+  <a href="/teams/<%= @team.id %>/edit">Edit</a>
+
+  <form action="/teams/<%=@team.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Team">
+  </form>
+  <a href="/">Home</a>
+</div>
