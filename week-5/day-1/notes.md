@@ -110,7 +110,7 @@
 - We can also create migrations to add columns, remove columns, drop tables.
 
 Resources
-- [http://guides.rubyonrails.org/active_record_migrations.html](ActiveRecord Migrations)
- - Any of the syntax that is `bin/rails` won't work.
-- [https://github.com/thuss/standalone-migrations](Standalone Migrations)
-- [http://bundler.io](Bundler)
+- [ActiveRecord Migrations](http://guides.rubyonrails.org/active_record_migrations.html)
+  - Any of the syntax that is `bin/rails` won't work.
+- [Standalone Migrations](https://github.com/thuss/standalone-migrations)
+- [Bundler](http://bundler.io)
