@@ -1,0 +1,43 @@
+<% content_for :banner do %>
+Add a Player
+<% end %>
+
+<% if flash[:error] %>
+  <h1 class="error"><%= flash[:error] %></h1>
+<% end %>
+
+<!-- CONVERT THIS TO USE CONTAINER -->
+<form action="/players/create" method="post">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input class="<%= @player.errors[:name].any? ? "field-error" : "" %>" type="text" name="name" value="<%= @player.name %>" >
+      <% if @player.errors[:name].any? %>
+        * error here
+      <% end %>
+    </li>
+    <li>
+      <label for="age">Age</label>
+      <input type="text" name="age" value="<%= @player.age %>">
+      <% if @player.errors[:age].any? %>
+        * error
+      <% end %>
+    </li>
+
+    <li>
+      <label for="shirt_size">Shirt Size</label>
+      <input type="text" name="shirt_size" value="<%= @player.shirt_size %>">
+    </li>
+
+    <li>
+      <label for="birthday">Birthday</label>
+      <input type="text" name="birthday" value="<%= @player.birthday %>">
+    </li>
+
+    <li>
+      <input type="submit" value="Create">
+    </li>
+  </ul>
+</form>
+
+<a href="/">Home</a>

@@ -15,4 +15,5 @@ gem 'pg'
 # Use this for flash messages in the session
 gem 'rack-flash3'
 
-gem 'sqlite3'
+# Allows us to use ActiveRecord migrations on their own
+gem 'standalone_migrations'

@@ -1,0 +1,29 @@
+<% content_for :banner do %>
+Add a Team
+<% end %>
+
+<!-- CONVERT THIS TO USE CONTAINER -->
+<form action="/teams" method="post">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name">
+    </li>
+
+    <li>
+      <label for="mascot">Mascot</label>
+      <input type="text" name="mascot">
+    </li>
+
+    <li>
+      <label for="sport">Sport</label>
+      <input type="text" name="sport">
+    </li>
+
+    <li>
+      <input type="submit" value="Create">
+    </li>
+  </ul>
+</form>
+
+<a href="/">Home</a>

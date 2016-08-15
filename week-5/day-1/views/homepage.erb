@@ -1,0 +1,38 @@
+<% content_for :title do %>
+TIY Sports Homepage
+<% end %>
+
+<% content_for :banner do %>
+Welcome to TIY Sports
+<% end %>
+
+<div>
+  <h2>Players</h2>
+  <ul>
+  <% @players.each do |player| %>
+    <li><a href="/players/<%= player.id %>"><%= player.name %></a></li>
+  <% end %>
+  </ul>
+
+  <a href="/players/new">Add Player</a>
+
+  <form action="/players/search" method="post">
+    <input type="text" name="name">
+    <input type="submit" value="Search Players">
+  </form>
+</div>
+
+<div>
+  <h2><a href="/teams">Teams - Mascot</a></h2>
+  <ul>
+  <% @teams.each do |team| %>
+    <li><a href="/teams/<%= team.id %>"><%= team.name %> - <%= team.mascot %></a></li>
+  <% end %>
+  </ul>
+  <a href="/teams/new">Add Team</a>
+
+  <form action="/teams/search" method="post">
+    <input type="text" name="name">
+    <input type="submit" value="Search Teams">
+  </form>
+</div>
