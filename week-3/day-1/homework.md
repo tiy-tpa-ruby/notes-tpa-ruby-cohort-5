@@ -5,7 +5,7 @@
 - If you don't have a blog, start one. Good site for starting one: [Medium](medium.com)
 - Watch these videos:
   - ["Taste" ](https://vimeo.com/85040589)
-  - ["Asking Questions"](https://vimeo.com/85040589)
+  - ["Asking Questions"](https://www.youtube.com/watch?v=hY14Er6JX2s)
 - Write a blog to cover these topics:
   - Reflect and comment on Ira's comments about the need for practice and the sense that you feel like your work isn't quality yet. This is a hard aspect of becoming a developer and something you'll face for a while.
   - Has your views on fixed-versus-growth mindset changed since starting TIY cohort, if so how?
