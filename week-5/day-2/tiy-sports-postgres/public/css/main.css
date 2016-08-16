@@ -1,0 +1,30 @@
+body {
+  background-color: #5b9292;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container, .box {
+  background-color: #84cfd2;
+  width: 75vw;
+  padding: 15px;
+  box-shadow: 3px 3px 0 rgba(51, 51, 51, 0.8);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+.field-error {
+  border: 5px solid red;
+}

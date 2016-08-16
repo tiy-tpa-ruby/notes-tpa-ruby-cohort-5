@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= yield_content :title %></title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <!-- Specialze the banner based on the page -->
+    <h2><%= yield_content :banner %></h2>
+
+    <div class="container">
+      <!-- This is where the template goes -->
+
+      <!-- e.g. this is where homepage.erb gets placed
+           this is where player_form.erb gets placed
+           this is where teams_edit.erb gets placed -->
+      <%= yield %>
+    </div>
+    <footer>
+      (c) 2016 The Iron Yard
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<% content_for :title do %>TIY Sports Player <%= @player.name %><% end %>
+
+<% content_for :banner do %>
+  Player Details
+<% end %>
+
+<div>
+  <% if @player %>
+    <ul>
+      <li>Name: <%= @player.name %></li>
+      <li>Age: <%= @player.age %></li>
+      <li>Shirt Size: <%= @player.shirt_size %></li>
+      <li>Birthday: <%= @player.birthday %></li>
+    </ul>
+  <% else %>
+    <h1>No Player Found</h1>
+  <% end %>
+</div>
+
+<div>
+  <form action="/players/player_update" method="post">
+    <input type="text" name="name">
+    <input type="submit" value="Update Player">
+  </form>
+
+  <br>
+
+  <form action="/players/delete/<%=@player.id %>" method="post">
+    <input type="submit" value="Delete Player">
+  </form>
+
+  <br>
+
+  <a href="/">Home</a>
+</div>

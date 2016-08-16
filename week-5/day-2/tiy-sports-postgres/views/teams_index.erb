@@ -1,0 +1,29 @@
+<% content_for :banner do %>
+Welcome to TIY Sports
+<% end %>
+
+<div>
+  <h2>
+    Teams - Mascot
+    <% if @name %>
+      - Searching for <%= @name %>
+    <% end %>
+  </h2>
+
+  <% if flash[:error] %>
+    <h3 class="error"><%= flash[:error] %></h3>
+  <% end %>
+
+  <ul>
+  <% @teams.each do |team| %>
+    <li><a href="/teams/<%= team.id %>"><%= team.name %> - <%= team.mascot %></a></li>
+  <% end %>
+  </ul>
+
+  <a href="/teams/new">Add Team</a>
+
+  <form action="/teams" method="get">
+    <input type="text" name="name">
+    <input type="submit" value="Search Teams">
+  </form>
+</div>
