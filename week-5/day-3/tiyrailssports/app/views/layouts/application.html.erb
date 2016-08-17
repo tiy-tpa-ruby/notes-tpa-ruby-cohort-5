@@ -10,7 +10,12 @@
 
   <body>
     <h1> LOGO <%= link_to 'Home', root_path %> </h1>
-    
+    <% if logged_in? %>
+      Logged in: <%= current_user.name %> | <%= link_to "Logout", logout_path %>
+    <% else %>
+      <%= link_to 'Login', login_path %> | <%= link_to 'Signup', signup_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

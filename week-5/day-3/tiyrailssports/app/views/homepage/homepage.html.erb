@@ -1,4 +1,4 @@
-Home
-
-<%= link_to 'Teams', teams_path %>
-<%= link_to 'Players', players_path %>
+<% if logged_in? %>
+  <%= link_to 'Teams', teams_path %>
+  <%= link_to 'Players', players_path %>
+<% end %>
