@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control input-lg" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :age %>
-    <%= f.number_field :age %>
+    <%= f.number_field :age, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :shirt_size %>
-    <%= f.text_field :shirt_size %>
+    <%= f.text_field :shirt_size, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :birthday %>
-    <%= f.date_select :birthday %>
+    <%= f.date_select :birthday, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
