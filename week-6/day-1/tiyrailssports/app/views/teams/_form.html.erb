@@ -1,0 +1,34 @@
+Yo, this is _form.html.erb
+
+<%= form_for(team) do |f| %>
+  <% if team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mascot %>
+    <%= f.text_field :mascot %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sport %>
+    <%= f.text_field :sport %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teams Index page FTW</h1>
+<%= link_to 'Get a list of players', players_path %>
+
+<%= link_to 'Made by The Iron Yard', 'http://theironyard.com', class: "escape" %>
+<a href="http://theironyard.com" class="escape">Made by The Iron Yard</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mascot</th>
+      <th>Sport</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.mascot %></td>
+        <td><%= team.sport %></td>
+        <td><%= link_to 'show', team %></td>
+        <td><%= link_to 'edit', edit_team_path(team) %></td>
+        <td><%= link_to 'delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>
