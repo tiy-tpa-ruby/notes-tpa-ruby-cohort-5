@@ -12,6 +12,15 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
 
+  # Omniauth login that sends the user over to the provider
+  get '/auth/:provider' => 'omniauth#auth', as: :auth
+
+  # Callback from the remote provider after they login over there
+  get '/auth/:provider/callback' => 'session#create'
+
+  # Callback when authorization fails
+  get '/auth/failure' => 'session#failure'
+
   resources :players
   resources :teams
 
