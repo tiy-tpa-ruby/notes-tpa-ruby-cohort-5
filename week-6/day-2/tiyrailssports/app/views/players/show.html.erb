@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<!-- If there is a user associated to this player -->
+<% if @player.user %>
+ <p>
+  Created by: <%= @player.user.name %>
+ </p>
+<% end %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @player.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @player.age %>
+</p>
+
+<p>
+  <strong>Shirt size:</strong>
+  <%= @player.shirt_size %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @player.birthday %>
+</p>
+
+<p>Teams:</p>
+<% @player.teams.each do |team| %>
+  <p><%= team.name %></p>
+<% end %>
+
+<!-- If the player's user IS the current user then we are
+     the user that created this player and we can edit -->
+<% if @player.authorized?(current_user) %>
+   <%= link_to 'Edit', edit_player_path(@player) %> |
+<% end %>
+
+<%= link_to 'Back', players_path %>

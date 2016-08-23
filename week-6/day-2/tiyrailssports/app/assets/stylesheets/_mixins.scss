@@ -1,0 +1,13 @@
+// Make nice border radiuses
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// padding
+@mixin standard-padding($padding) {
+  padding-top: $padding;
+  padding-left: 5.5 * $padding;
+}
