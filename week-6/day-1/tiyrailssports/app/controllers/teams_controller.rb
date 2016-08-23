@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-  before_action :authorize!
+  before_action :authenticate!
 
   # GET /teams
   # GET /teams.json
