@@ -1,0 +1,7 @@
+- Asset pipeline
+- How to style active links based on current controller
+  - Use a conditional on `controller_name`
+- Show scss/sass styling, mixins, variables, etc.
+  - See [Sass/Scss Guide](http://sass-lang.com)
+- Show `has_many` through
+  - [Rails Guides for Associations](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
