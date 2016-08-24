@@ -14,7 +14,7 @@
       %tr
         %td= category.name
         %td= category.subject
-        %td= category.terms.length
+        %td= category.terms.count
         %td= link_to 'Show', category
         %td= link_to 'Edit', edit_category_path(category)
         %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }

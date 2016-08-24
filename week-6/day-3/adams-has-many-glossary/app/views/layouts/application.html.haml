@@ -15,15 +15,15 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => root_path}
-            %img(src="logo-white.png" height="28px")
+          = link_to root_path, class: "navbar-brand" do
+            = image_tag("logo-white.png", height: "28px")
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => terms_path} Terms
+              = link_to "Terms", terms_path
 
             %li
-              %a{:href => categories_path} Categories
+              = link_to "Categories", categories_path
           %form.navbar-form.navbar-left{:role => "search"}
             .form-group
               %input.form-control{:placeholder => "Search", :type => "text"}/

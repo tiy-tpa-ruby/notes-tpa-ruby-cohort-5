@@ -14,8 +14,7 @@
   = @term.web_link
 %p
   %b Categories:
-  - @term.categories.each do |category|
-    =category.name
+  = @term.categories.map { |term| term.name }.to_sentence
 
 = link_to 'Edit', edit_term_path(@term)
 \|
