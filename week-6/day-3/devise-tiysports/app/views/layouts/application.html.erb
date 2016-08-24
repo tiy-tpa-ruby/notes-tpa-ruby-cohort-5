@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+       <p>
+       Welcome: <%= current_user.email %>
+       </p>
+       <p>
+       We haven't seen you in: <%= distance_of_time_in_words_to_now(current_user.last_sign_in_at) %>
+       </p>
+
+       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+    <% end %>
     <%= yield %>
   </body>
 </html>
