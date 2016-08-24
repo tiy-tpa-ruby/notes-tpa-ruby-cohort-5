@@ -7,8 +7,11 @@
   %b Subject:
   = @category.subject
 %p
-  %b Terms:
-  = @category.terms.map { |term| term.name }.to_sentence
+  Terms:
+  %ul
+    - @category.terms.each do |term|
+      %li
+        = link_to term.name, term
 = link_to 'Edit', edit_category_path(@category)
 \|
 = link_to 'Back', categories_path

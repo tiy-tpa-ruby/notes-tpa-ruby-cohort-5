@@ -12,10 +12,12 @@
 %p
   %b Web link:
   = @term.web_link
-%p
-  %b Categories:
-  = @term.categories.map { |term| term.name }.to_sentence
 
+%p Categories:
+%ul
+  - @term.categories.each do |category|
+    %li
+      = link_to category.name, category
 = link_to 'Edit', edit_term_path(@term)
 \|
 = link_to 'Back', terms_path
