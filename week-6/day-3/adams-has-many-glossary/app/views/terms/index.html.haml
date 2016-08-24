@@ -1,0 +1,29 @@
+%h1 Listing terms
+
+%table.table.table-striped.table-hover
+  %thead
+    %tr
+      %th Name
+      %th Definition
+      %th Author
+      %th Web link
+      %th Categories
+      %th
+      %th
+      %th
+
+  %tbody
+    - @terms.each do |term|
+      %tr
+        %td= term.name
+        %td= term.definition
+        %td= term.author
+        %td= term.web_link
+        %td= term.categories.length
+        %td= link_to 'Show', term
+        %td= link_to 'Edit', edit_term_path(term)
+        %td= link_to 'Destroy', term, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Term', new_term_path

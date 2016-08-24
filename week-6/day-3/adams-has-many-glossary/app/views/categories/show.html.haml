@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @category.name
+%p
+  %b Subject:
+  = @category.subject
+%p
+  %b Terms:
+  - @category.terms.each do |term|
+    = term.name
+= link_to 'Edit', edit_category_path(@category)
+\|
+= link_to 'Back', categories_path

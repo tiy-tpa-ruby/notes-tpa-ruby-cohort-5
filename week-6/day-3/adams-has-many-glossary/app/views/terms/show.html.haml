@@ -1,0 +1,22 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @term.name
+%p
+  %b Definition:
+  = @term.definition
+%p
+  %b Author:
+  = @term.author
+%p
+  %b Web link:
+  = @term.web_link
+%p
+  %b Categories:
+  - @term.categories.each do |category|
+    =category.name
+
+= link_to 'Edit', edit_term_path(@term)
+\|
+= link_to 'Back', terms_path
