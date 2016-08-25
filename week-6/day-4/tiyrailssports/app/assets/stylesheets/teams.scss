@@ -1,0 +1,12 @@
+// Place all the styles related to the teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.edit_team {
+  color: green;
+  @include border-radius(10px);
+  @include standard-padding(15px);
+
+  input {
+  }
+}

@@ -1,0 +1,46 @@
+<%= form_for(player) do |f| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control input-lg" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :age %>
+    <%= f.number_field :age, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :shirt_size %>
+    <%= f.text_field :shirt_size, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.attachment_field :profile_image %>
+  </div>
+
+  <div class="form-group field">
+                           <!-- field name  collection   value   display -->
+    <%= f.collection_check_boxes(:team_ids,  Team.all,   :id,    :name) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
