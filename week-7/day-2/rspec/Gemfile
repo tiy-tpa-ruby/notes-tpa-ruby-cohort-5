@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+group :development do
+  # Testing gem
+  gem 'rspec'
+
+  # guard to auto-run our tests continuously
+  gem 'guard-rspec', require: false
+
+  # Get notifications on OS X
+  gem 'terminal-notifier-guard'
+end
