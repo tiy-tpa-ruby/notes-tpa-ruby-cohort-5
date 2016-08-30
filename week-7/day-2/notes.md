@@ -1,4 +1,10 @@
-# Create a `Gemfile`
+# Gavin's testing presentation
+
+- See PDF in this folder
+
+# Adding rspec + guard to a ruby app
+
+## Create a `Gemfile`
 ```
 source 'https://rubygems.org'
 
@@ -14,16 +20,16 @@ group :development do
 end
 ```
 
-# Initialize `rspec`
+## Initialize `rspec`
 `rspec --init`
 
-# Initialize guard
+## Initialize guard
 `bundle exec guard init rspec`
 
-# Run guard
+## Run guard
 `bundle exec guard`
 
-# Create a spec in `spec/fizzbuzz_spec.rb`
+## Create a spec in `spec/fizzbuzz_spec.rb`
 ```
 require_relative "spec_helper"
 
