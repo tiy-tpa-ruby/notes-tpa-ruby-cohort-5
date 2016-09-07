@@ -37,11 +37,6 @@
         <ul class="nav navbar-nav">
           <li class="active"><%= link_to "Home", root_path %></li>
         </ul>
-        <form action="<%= books_path %>" class="navbar-form navbar-right">
-          <div class="form-group">
-            <%= select_tag "author_id", options_from_collection_for_select(@authors, "id", "name"), prompt: "Author", class: "form-control" %>
-          </div>
-        </form>
       </div>
     </div>
   </nav>

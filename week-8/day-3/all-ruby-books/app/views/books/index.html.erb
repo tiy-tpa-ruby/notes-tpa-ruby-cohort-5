@@ -1,5 +1,3 @@
-<div id="books" class="row">
-  <%= render @books %>
-</div>
+<%= react_component('Books', { books: @books, authors: @authors }, {prerender: true})%>
 
 <div class="log"><div>
