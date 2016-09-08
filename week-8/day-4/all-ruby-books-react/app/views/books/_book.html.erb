@@ -1,0 +1,13 @@
+<div class="col-md-4">
+  <div class="book-panel">
+    <h2><%= book.title %></h2>
+    <ul class='categories'>
+      <% book.categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+    </ul>
+    <p class="authors"><%= book.authors.map(&:name).to_sentence %></p>
+    <p class="year"><%= book.editor %>, <%= book.year %></p>
+    <p class="price"><%= book.prices %></p>
+  </div>
+</div>
