@@ -22,4 +22,10 @@ $(document).on('turbolinks:load', function() {
     })
   })
 
+  $(".authors li").on("click", function(event) {
+    var author_id = $(this).data("author-id")
+    var book_id = $(this).data("book-id")
+
+    $.getScript({ url: "/authors/profile_image", data: { book_id: book_id, author_id: author_id} })
+  })
 })

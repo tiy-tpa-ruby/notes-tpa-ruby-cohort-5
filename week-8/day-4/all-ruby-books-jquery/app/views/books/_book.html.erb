@@ -1,12 +1,16 @@
 <div class="col-md-4">
-  <div class="book-panel">
+  <div class="book-panel" id="book-<%= book.id %>" >
     <h2><%= book.title %></h2>
     <ul class='categories'>
       <% book.categories.each do |category| %>
         <li><%= category.name %></li>
       <% end %>
     </ul>
-    <p class="authors"><%= book.authors.map(&:name).to_sentence %></p>
+    <ul class="authors">
+      <% book.authors.each do |author| %>
+        <li data-author-id="<%= author.id %>" data-book-id="<%= book.id %>"><%= author.name %></li>
+      <% end %>
+    </ul>
     <p class="year"><%= book.editor %>, <%= book.year %></p>
     <p class="price"><%= book.prices %></p>
   </div>
