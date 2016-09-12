@@ -1,11 +1,21 @@
 class DefinitionsController < ApplicationController
   def show_def
-    @term = params[:term].downcase
+    api_class = current_user.premium? ? Api::Websters : Api::Wordnik
 
-    url = URI.escape("http://api.wordnik.com:80/v4/word.json/#{@term}/definitions?limit=10&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")
+    # Ternary above is shorthand for one of these:
+    #
+    # if current_user.premium?
+    #   api_class = Api::Websters
+    # else
+    #   api_class = Api::Wordnik
+    # end
+    #
+    # api_class = if current_user.premium?
+    #               Api::Websters
+    #             else
+    #               Api::Wordnik
+    #             end
 
-    @results = HTTParty.get(url)
-
-    @definitions = @results.map { |result| result["text"] }
+    @definitions = api_class.new(params[:term]).definitions
   end
 end

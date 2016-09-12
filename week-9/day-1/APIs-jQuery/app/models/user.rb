@@ -17,4 +17,8 @@ class User < ApplicationRecord
 
     return user
   end
+
+  def premium?
+    false
+  end
 end
