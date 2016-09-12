@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @term.name %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @term.definition %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @term.author %>
+</p>
+
+
+<p>
+  <strong>Web link:</strong>
+  <%= @term.web_link %>
+</p>
+
+<p> Terms: </p>
+<% @term.categories.each do |term| %>
+  <p> <%= term.name %> </p>
+<% end %>
+
+<%= link_to 'Edit', edit_term_path(@term), class: "btn btn-primary" %> |
+<%= link_to 'Back', terms_path, class: "btn btn-primary" %>%>

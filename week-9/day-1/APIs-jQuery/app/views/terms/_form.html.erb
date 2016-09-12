@@ -1,0 +1,47 @@
+
+<div class="actions">
+  <a class="btn btn-primary find-definitions">Find Definitions</a>
+
+</div>
+
+
+
+<%= form_for(term) do |f| %>
+
+  <div class="form-group field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+   </div>
+
+  <div class="form-group field">
+    <%= f.label :definition %>
+    <%= f.text_field :definition, class: "form-control", value: "Adam" %>
+  </div>
+
+  <div class="found-definitions">
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :web_link %>
+    <%= f.text_field :web_link, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+      <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %>
+      <span>
+        <%= category.check_box %>
+
+        <%= category.label %>
+      </span>
+    <% end %>
+   </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
