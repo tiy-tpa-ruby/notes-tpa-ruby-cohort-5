@@ -25,4 +25,6 @@
 
 body { padding-top: 20px; }
 
-.found-definitions li {color: red};
+.found-definitions li {
+  cursor: pointer;
+};

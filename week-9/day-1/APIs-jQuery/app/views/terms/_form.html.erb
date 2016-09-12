@@ -1,9 +1,4 @@
 
-<div class="actions">
-  <a class="btn btn-primary find-definitions">Find Definitions</a>
-
-</div>
-
 
 
 <%= form_for(term) do |f| %>
@@ -11,6 +6,9 @@
   <div class="form-group field">
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <a class="btn btn-primary btn-xs find-definitions">
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </a>
    </div>
 
   <div class="form-group field">

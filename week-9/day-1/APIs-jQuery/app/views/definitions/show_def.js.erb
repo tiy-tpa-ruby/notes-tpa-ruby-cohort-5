@@ -1,2 +1,7 @@
-// This is what we eventually want.
-$(".found-definitions").html("<ul><% @definitions.each do |definition| %><li><%= j(definition) %></li><% end %></ul>")
+<% if @definitions.empty? %>
+  // otherwise this
+  $(".found-definitions").html('<div class="alert alert-danger" role="alert">Ooops, did not find any definitions for <%= j(@term) %></div>')
+<% else %>
+  // if found, this
+  $(".found-definitions").html("<ul class='list-group'><li class='list-group-item list-group-item-success'>Found these definitions<span class='badge'><%= @definitions.length %></span></li><% @definitions.each do |definition| %><li class='list-group-item'><%= j(definition) %></li><% end %></ul>")
+<% end %>
