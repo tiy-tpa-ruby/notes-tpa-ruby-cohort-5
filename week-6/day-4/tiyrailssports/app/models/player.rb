@@ -1,7 +1,7 @@
 class Player < ApplicationRecord
   # Since players table now has `user_id` we can relate these two
   # models (tables) - since *this* table has the id, we `belongs_to` the other
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :rosters, dependent: :delete_all
   has_many :teams, through: :rosters
 
