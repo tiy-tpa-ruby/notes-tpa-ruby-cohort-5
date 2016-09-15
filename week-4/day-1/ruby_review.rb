@@ -8,7 +8,6 @@
 # Use the programmers print to output the value of sentence
 
 # Create a variable called `numbers` with six of your favorite numbers
-numbers = [1, 7, 8, 42, 11, 4]
 
 # Create a varible called `third_number` and assign it the third number
 # of the array, using array indexing
