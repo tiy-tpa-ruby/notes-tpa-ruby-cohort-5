@@ -26,7 +26,7 @@
 
 - Other types of loops
   - while
-  - ```
+    ```
     names = ["Gavin", "Jason", "Toni"]
     i = 0
     while i < names.length do
@@ -34,22 +34,24 @@
       i += 1
     end
     ```
-
-  - ```
+  - for (array)
+    ```
     names = ["Gavin", "Jason", "Toni"]
     for name in names do
       puts name
     end
-
+    ```
+  - for (hash)
+    ```
     details = { "name" => "Gavin", "score" => 100 }
     for key, value in details do
       puts "The key is #{key} and the value is #{value}"
     end
     ```
-- %w(Gavin Jason Toni)
+- `%w(Gavin Jason Toni)`
 - Reading / writing files
   - gets / puts
   - STDIN/STDOUT
-  - File.read("filename")
-  - File.readlines("filename")
+  - `File.read("filename")`
+  - `File.readlines("filename")`
 
